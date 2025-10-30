@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoken English - ZeroShotHire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand" onclick="window.location.href='index.html'">
+                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2v6m0 0l4-4m-4 4L8 4m4 14v6m0 0l4-4m-4 4l-4-4M2 12h6m0 0L4 8m4 4l-4 4m14-4h6m0 0l-4-4m4 4l-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="brand-name">ZeroShotHire</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-label">Career Tools</h3>
+                    <ul class="nav-list">
+                        <li><a href="internship.html" class="nav-link">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6m12 5h1.5a2.5 2.5 0 0 0 0-5H18m-12 5h12m0 0v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9" stroke-width="2"/></svg>
+                            <span>Internship</span>
+                        </a></li>
+                        <li><a href="dsa.html" class="nav-link">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 18l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M4 6h16M4 12h16M4 18h7" stroke-width="2"/></svg>
+                            <span>DSA</span>
+                        </a></li>
+                        <li><a href="spoken-english.html" class="nav-link">
+                    <li><a href="book-store.html" class="nav-link"><i data-lucide="book" class="nav-icon"></i> Book Store</a></li>
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3l-4 4z" stroke-width="2"/></svg>
+                            <span>Spoken English</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M3 6h18M3 18h18" stroke-width="2"/></svg>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5" stroke-width="2"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="2"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-width="2"/></svg>
+                </button>
+            </header>
+
+            <div class="page-content">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <div style="margin-bottom: 2rem;">
+                        <h1 class="hero-title">Spoken English</h1>
+                        <p class="hero-subtitle">Master English communication with interactive mock courses and real-world scenarios</p>
+                    </div>
+
+                    <div class="cards-grid" id="coursesGrid"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="lucide-icons.js"></script>
+    <script src="spoken-english.js"></script>
+    <script>
+        const courses = [
+            {
+                id: 1,
+                title: "Business Communication Essentials",
+                description: "Master professional communication skills for workplace success. Learn formal presentations, email writing, and meeting etiquette.",
+                level: "Intermediate",
+                duration: "6 weeks",
+                topics: ["Email Writing", "Presentations", "Meeting Skills", "Negotiations"],
+                scenarios: 24,
+                enrolled: false
+            },
+            {
+                id: 2,
+                title: "Everyday Conversations",
+                description: "Build confidence in daily English conversations. Practice common situations like shopping, ordering food, and making small talk.",
+                level: "Beginner",
+                duration: "4 weeks",
+                topics: ["Greetings", "Shopping", "Restaurants", "Small Talk"],
+                scenarios: 18,
+                enrolled: false
+            },
+            {
+                id: 3,
+                title: "Job Interview Mastery",
+                description: "Ace your next job interview with perfect English. Practice common interview questions, body language, and professional responses.",
+                level: "Intermediate",
+                duration: "3 weeks",
+                topics: ["Self Introduction", "Technical Questions", "Behavioral Questions", "Salary Negotiation"],
+                scenarios: 20,
+                enrolled: false
+            }
+        ];
+
+        function getLevelClass(level) {
+            if (level === 'Beginner') return 'success';
+            if (level === 'Intermediate') return 'warning';
+            return 'danger';
+        }
+
+        function renderCourses() {
+            const grid = document.getElementById('coursesGrid');
+            grid.innerHTML = courses.map(course => `
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h3 class="card-title">${course.title}</h3>
+                            <span class="badge ${getLevelClass(course.level)}">${course.level}</span>
+                        </div>
+                        <p class="card-description">${course.description}</p>
+                    </div>
+                    <div class="card-content">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.875rem; color: var(--muted-foreground);">
+                            <span>⏱️ ${course.duration}</span>
+                            <span>👥 ${course.scenarios} scenarios</span>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Topics Covered:</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                ${course.topics.map(topic => `<span class="badge">${topic}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        ${course.enrolled 
+                            ? '<button class="btn btn-outline" style="flex: 1;">Practice</button>'
+                            : `<button class="btn btn-primary" style="flex: 1;" onclick="enrollCourse(${course.id})">Enroll Now</button>`
+                        }
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function enrollCourse(id) {
+            const course = courses.find(c => c.id === id);
+            if (course) {
+                course.enrolled = true;
+                renderCourses();
+                alert(`Successfully enrolled in "${course.title}"!`);
+            }
+        }
+
+        renderCourses();
+    </script>
+</body>
+</html>

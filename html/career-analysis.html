@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Analysis - ZeroShotHire</title>
+    <meta name="description" content="Discover your ideal career path through our comprehensive AI-powered career analysis">
+    <link rel="stylesheet" href="styles.css">
+    <script src="lucide-icons.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand">
+                    <svg class="brand-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    <span class="brand-name">ZeroShotHire</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-label">Main</div>
+                    <ul class="nav-list">
+                        <li><a href="dashboard.html" class="nav-link"><i data-lucide="layout-dashboard" class="nav-icon"></i> Dashboard</a></li>
+                        <li><a href="career-analysis.html" class="nav-link active"><i data-lucide="search" class="nav-icon"></i> Career Analysis</a></li>
+                        <li><a href="recommendations.html" class="nav-link"><i data-lucide="star" class="nav-icon"></i> Recommendations</a></li>
+                        <li><a href="learning-path.html" class="nav-link"><i data-lucide="book-open" class="nav-icon"></i> Learning Path</a></li>
+                        <li><a href="career-roadmaps.html" class="nav-link"><i data-lucide="map" class="nav-icon"></i> Career Roadmaps</a></li>
+                        <li><a href="progress.html" class="nav-link"><i data-lucide="trophy" class="nav-icon"></i> Progress</a></li>
+                        <li><a href="jobs.html" class="nav-link"><i data-lucide="briefcase" class="nav-icon"></i> Job Matches</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-label">Tools</div>
+                    <ul class="nav-list">
+                        <li><a href="ai-coach.html" class="nav-link"><i data-lucide="bot" class="nav-icon"></i> AI Career Coach</a></li>
+                        <li><a href="assessments.html" class="nav-link"><i data-lucide="clipboard-check" class="nav-icon"></i> Skill Assessments</a></li>
+                        <li><a href="salary-calculator.html" class="nav-link"><i data-lucide="dollar-sign" class="nav-icon"></i> Salary Calculator</a></li>
+                        <li><a href="interview-simulator.html" class="nav-link"><i data-lucide="video" class="nav-icon"></i> Interview Simulator</a></li>
+                        <li><a href="events.html" class="nav-link"><i data-lucide="calendar" class="nav-icon"></i> Networking Events</a></li>
+                        <li><a href="career-comparison.html" class="nav-link"><i data-lucide="git-compare" class="nav-icon"></i> Career Comparison</a></li>
+                        <li><a href="goal-tracker.html" class="nav-link"><i data-lucide="target" class="nav-icon"></i> Goal Tracker</a></li>
+                        <li><a href="company-matcher.html" class="nav-link"><i data-lucide="building" class="nav-icon"></i> Company Matcher</a></li>
+                        <li><a href="career-news.html" class="nav-link"><i data-lucide="newspaper" class="nav-icon"></i> Career News</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-label">Resources</div>
+                    <ul class="nav-list">
+                        <li><a href="linkedin-booster.html" class="nav-link"><i data-lucide="linkedin" class="nav-icon"></i> LinkedIn Booster</a></li>
+                        <li><a href="resume-builder.html" class="nav-link"><i data-lucide="file-text" class="nav-icon"></i> Resume Builder</a></li>
+                        <li><a href="internship.html" class="nav-link"><i data-lucide="graduation-cap" class="nav-icon"></i> Internships</a></li>
+                        <li><a href="dsa.html" class="nav-link"><i data-lucide="code" class="nav-icon"></i> DSA Practice</a></li>
+                        <li><a href="spoken-english.html" class="nav-link"><i data-lucide="mic" class="nav-icon"></i> Spoken English</a></li>
+                    <li><a href="book-store.html" class="nav-link"><i data-lucide="book" class="nav-icon"></i> Book Store</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-label">Account</div>
+                    <ul class="nav-list">
+                        <li><a href="profile.html" class="nav-link"><i data-lucide="user" class="nav-icon"></i> Profile</a></li>
+                        <li><a href="settings.html" class="nav-link"><i data-lucide="settings" class="nav-icon"></i> Settings</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon hidden"></i>
+                </button>
+            </header>
+
+            <div class="page-content">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h1 class="text-4xl font-bold mb-2">Career Analysis</h1>
+                    <p class="text-lg text-muted">Discover your ideal career path through comprehensive analysis</p>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div class="mb-8">
+                    <div class="progress mb-2">
+                        <div class="progress-bar" id="overallProgress" style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-muted text-center"><span id="currentStepNum">1</span> of 5 steps completed</p>
+                </div>
+
+                <!-- Steps -->
+                <div class="steps-container mb-8">
+                    <div class="step active" data-step="0">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Skills</div>
+                    </div>
+                    <div class="step" data-step="1">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Interests</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Education</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Goals</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Preferences</div>
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <div class="card">
+                    <div class="card-content">
+                        <form id="careerForm">
+                            <!-- Step 1: Skills -->
+                            <div class="form-step active" data-step="0">
+                                <h2 class="text-2xl font-bold mb-4">What are your current skills?</h2>
+                                <p class="text-muted mb-6">Select or add skills you possess</p>
+                                
+                                <div class="input-group">
+                                    <label>Add Skills</label>
+                                    <div class="flex gap-2">
+                                        <input type="text" class="input" id="skillInput" placeholder="Type a skill and press Enter">
+                                        <button type="button" class="btn btn-primary" onclick="addSkill()">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Selected Skills</label>
+                                    <div class="tags-container" id="skillsContainer">
+                                        <span class="badge">Click "Add" or press Enter to add skills</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Suggestions</label>
+                                    <div class="tags-container">
+                                        <button type="button" class="badge primary" onclick="addSuggestion('JavaScript')">JavaScript</button>
+                                        <button type="button" class="badge primary" onclick="addSuggestion('Python')">Python</button>
+                                        <button type="button" class="badge primary" onclick="addSuggestion('React')">React</button>
+                                        <button type="button" class="badge primary" onclick="addSuggestion('Data Analysis')">Data Analysis</button>
+                                        <button type="button" class="badge primary" onclick="addSuggestion('Project Management')">Project Management</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Interests -->
+                            <div class="form-step" data-step="1">
+                                <h2 class="text-2xl font-bold mb-4">What areas interest you?</h2>
+                                <p class="text-muted mb-6">Select topics you're passionate about</p>
+                                
+                                <div class="input-group">
+                                    <label>Add Interests</label>
+                                    <div class="flex gap-2">
+                                        <input type="text" class="input" id="interestInput" placeholder="Type an interest and press Enter">
+                                        <button type="button" class="btn btn-primary" onclick="addInterest()">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Selected Interests</label>
+                                    <div class="tags-container" id="interestsContainer">
+                                        <span class="badge">Click "Add" or press Enter to add interests</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Suggestions</label>
+                                    <div class="tags-container">
+                                        <button type="button" class="badge primary" onclick="addInterestSuggestion('Web Development')">Web Development</button>
+                                        <button type="button" class="badge primary" onclick="addInterestSuggestion('Machine Learning')">Machine Learning</button>
+                                        <button type="button" class="badge primary" onclick="addInterestSuggestion('Design')">Design</button>
+                                        <button type="button" class="badge primary" onclick="addInterestSuggestion('Data Science')">Data Science</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Education -->
+                            <div class="form-step" data-step="2">
+                                <h2 class="text-2xl font-bold mb-4">What's your education level?</h2>
+                                <p class="text-muted mb-6">Select your highest level of education</p>
+                                
+                                <div class="input-group">
+                                    <label>Education Level</label>
+                                    <select class="select" id="education">
+                                        <option value="">Select education level</option>
+                                        <option value="high-school">High School</option>
+                                        <option value="associate">Associate Degree</option>
+                                        <option value="bachelor">Bachelor's Degree</option>
+                                        <option value="master">Master's Degree</option>
+                                        <option value="phd">PhD</option>
+                                        <option value="bootcamp">Bootcamp</option>
+                                        <option value="self-taught">Self-Taught</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Field of Study (Optional)</label>
+                                    <input type="text" class="input" id="fieldOfStudy" placeholder="e.g., Computer Science">
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Goals -->
+                            <div class="form-step" data-step="3">
+                                <h2 class="text-2xl font-bold mb-4">What are your career goals?</h2>
+                                <p class="text-muted mb-6">Select or add your career aspirations</p>
+                                
+                                <div class="input-group">
+                                    <label>Add Career Goals</label>
+                                    <div class="flex gap-2">
+                                        <input type="text" class="input" id="goalInput" placeholder="Type a goal and press Enter">
+                                        <button type="button" class="btn btn-primary" onclick="addGoal()">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Selected Goals</label>
+                                    <div class="tags-container" id="goalsContainer">
+                                        <span class="badge">Click "Add" or press Enter to add goals</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="mb-2 block">Common Goals</label>
+                                    <div class="tags-container">
+                                        <button type="button" class="badge primary" onclick="addGoalSuggestion('High Salary')">High Salary</button>
+                                        <button type="button" class="badge primary" onclick="addGoalSuggestion('Work-Life Balance')">Work-Life Balance</button>
+                                        <button type="button" class="badge primary" onclick="addGoalSuggestion('Remote Work')">Remote Work</button>
+                                        <button type="button" class="badge primary" onclick="addGoalSuggestion('Leadership Role')">Leadership Role</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: Preferences -->
+                            <div class="form-step" data-step="4">
+                                <h2 class="text-2xl font-bold mb-4">Tell us your preferences</h2>
+                                <p class="text-muted mb-6">Help us understand your ideal work environment</p>
+                                
+                                <div class="input-group">
+                                    <label>Work Style</label>
+                                    <select class="select" id="workStyle">
+                                        <option value="">Select work style</option>
+                                        <option value="remote">Remote</option>
+                                        <option value="hybrid">Hybrid</option>
+                                        <option value="office">Office</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Preferred Location</label>
+                                    <input type="text" class="input" id="location" placeholder="e.g., San Francisco, Remote">
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Salary Expectation</label>
+                                    <select class="select" id="salary">
+                                        <option value="">Select salary range</option>
+                                        <option value="0-50k">$0 - $50,000</option>
+                                        <option value="50k-80k">$50,000 - $80,000</option>
+                                        <option value="80k-120k">$80,000 - $120,000</option>
+                                        <option value="120k-180k">$120,000 - $180,000</option>
+                                        <option value="180k+">$180,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <div class="flex justify-between mt-8">
+                                <button type="button" class="btn btn-outline" id="prevBtn" onclick="previousStep()" disabled>
+                                    <i data-lucide="arrow-left"></i>
+                                    Previous
+                                </button>
+                                <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextStep()">
+                                    Next
+                                    <i data-lucide="arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="career-analysis.js"></script>
+    <script>
+        let currentStep = 0;
+        const totalSteps = 5;
+        let formData = {
+            skills: [],
+            interests: [],
+            education: '',
+            goals: [],
+            workStyle: '',
+            location: '',
+            salary: ''
+        };
+
+        function updateProgress() {
+            const progress = ((currentStep + 1) / totalSteps) * 100;
+            document.getElementById('overallProgress').style.width = progress + '%';
+            document.getElementById('currentStepNum').textContent = currentStep + 1;
+
+            // Update steps
+            document.querySelectorAll('.step').forEach((step, index) => {
+                step.classList.remove('active', 'completed');
+                if (index < currentStep) {
+                    step.classList.add('completed');
+                } else if (index === currentStep) {
+                    step.classList.add('active');
+                }
+            });
+
+            // Update form steps
+            document.querySelectorAll('.form-step').forEach((step, index) => {
+                step.classList.remove('active');
+                if (index === currentStep) {
+                    step.classList.add('active');
+                }
+            });
+
+            // Update buttons
+            document.getElementById('prevBtn').disabled = currentStep === 0;
+            const nextBtn = document.getElementById('nextBtn');
+            if (currentStep === totalSteps - 1) {
+                nextBtn.innerHTML = '<i data-lucide="check"></i> Submit';
+                nextBtn.onclick = submitForm;
+            } else {
+                nextBtn.innerHTML = 'Next <i data-lucide="arrow-right"></i>';
+                nextBtn.onclick = nextStep;
+            }
+            lucide.createIcons();
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps - 1) {
+                currentStep++;
+                updateProgress();
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                updateProgress();
+            }
+        }
+
+        function submitForm() {
+            formData.education = document.getElementById('education').value;
+            formData.workStyle = document.getElementById('workStyle').value;
+            formData.location = document.getElementById('location').value;
+            formData.salary = document.getElementById('salary').value;
+
+            console.log('Form submitted:', formData);
+            alert('Analysis complete! Redirecting to recommendations...');
+            window.location.href = 'recommendations.html';
+        }
+
+        function addSkill() {
+            const input = document.getElementById('skillInput');
+            const skill = input.value.trim();
+            if (skill && !formData.skills.includes(skill)) {
+                formData.skills.push(skill);
+                updateSkillsDisplay();
+                input.value = '';
+            }
+        }
+
+        function addSuggestion(skill) {
+            if (!formData.skills.includes(skill)) {
+                formData.skills.push(skill);
+                updateSkillsDisplay();
+            }
+        }
+
+        function removeSkill(skill) {
+            formData.skills = formData.skills.filter(s => s !== skill);
+            updateSkillsDisplay();
+        }
+
+        function updateSkillsDisplay() {
+            const container = document.getElementById('skillsContainer');
+            if (formData.skills.length === 0) {
+                container.innerHTML = '<span class="badge">Click "Add" or press Enter to add skills</span>';
+            } else {
+                container.innerHTML = formData.skills.map(skill => 
+                    `<span class="tag">${skill}<button class="tag-remove" onclick="removeSkill('${skill}')">×</button></span>`
+                ).join('');
+            }
+        }
+
+        function addInterest() {
+            const input = document.getElementById('interestInput');
+            const interest = input.value.trim();
+            if (interest && !formData.interests.includes(interest)) {
+                formData.interests.push(interest);
+                updateInterestsDisplay();
+                input.value = '';
+            }
+        }
+
+        function addInterestSuggestion(interest) {
+            if (!formData.interests.includes(interest)) {
+                formData.interests.push(interest);
+                updateInterestsDisplay();
+            }
+        }
+
+        function removeInterest(interest) {
+            formData.interests = formData.interests.filter(i => i !== interest);
+            updateInterestsDisplay();
+        }
+
+        function updateInterestsDisplay() {
+            const container = document.getElementById('interestsContainer');
+            if (formData.interests.length === 0) {
+                container.innerHTML = '<span class="badge">Click "Add" or press Enter to add interests</span>';
+            } else {
+                container.innerHTML = formData.interests.map(interest => 
+                    `<span class="tag">${interest}<button class="tag-remove" onclick="removeInterest('${interest}')">×</button></span>`
+                ).join('');
+            }
+        }
+
+        function addGoal() {
+            const input = document.getElementById('goalInput');
+            const goal = input.value.trim();
+            if (goal && !formData.goals.includes(goal)) {
+                formData.goals.push(goal);
+                updateGoalsDisplay();
+                input.value = '';
+            }
+        }
+
+        function addGoalSuggestion(goal) {
+            if (!formData.goals.includes(goal)) {
+                formData.goals.push(goal);
+                updateGoalsDisplay();
+            }
+        }
+
+        function removeGoal(goal) {
+            formData.goals = formData.goals.filter(g => g !== goal);
+            updateGoalsDisplay();
+        }
+
+        function updateGoalsDisplay() {
+            const container = document.getElementById('goalsContainer');
+            if (formData.goals.length === 0) {
+                container.innerHTML = '<span class="badge">Click "Add" or press Enter to add goals</span>';
+            } else {
+                container.innerHTML = formData.goals.map(goal => 
+                    `<span class="tag">${goal}<button class="tag-remove" onclick="removeGoal('${goal}')">×</button></span>`
+                ).join('');
+            }
+        }
+
+        // Handle Enter key for inputs
+        document.getElementById('skillInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addSkill();
+            }
+        });
+
+        document.getElementById('interestInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addInterest();
+            }
+        });
+
+        document.getElementById('goalInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addGoal();
+            }
+        });
+
+        // Initialize
+        updateProgress();
+        lucide.createIcons();
+    </script>
+</body>
+</html>

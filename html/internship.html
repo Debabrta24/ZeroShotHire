@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities - ZeroShotHire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand" onclick="window.location.href='index.html'">
+                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2v6m0 0l4-4m-4 4L8 4m4 14v6m0 0l4-4m-4 4l-4-4M2 12h6m0 0L4 8m4 4l-4 4m14-4h6m0 0l-4-4m4 4l-4 4" stroke-width="2"/>
+                    </svg>
+                    <span class="brand-name">ZeroShotHire</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-label">Career Tools</h3>
+                    <ul class="nav-list">
+                        <li><a href="internship.html" class="nav-link">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6m12 5h1.5a2.5 2.5 0 0 0 0-5H18m-12 5h12m0 0v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9" stroke-width="2"/></svg>
+                            <span>Internship</span>
+                        </a></li>
+                        <li><a href="dsa.html" class="nav-link">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 18l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M4 6h16M4 12h16M4 18h7" stroke-width="2"/></svg>
+                            <span>DSA</span>
+                        </a></li>
+                        <li><a href="spoken-english.html" class="nav-link">
+                    <li><a href="book-store.html" class="nav-link"><i data-lucide="book" class="nav-icon"></i> Book Store</a></li>
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3l-4 4z" stroke-width="2"/></svg>
+                            <span>Spoken English</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M3 6h18M3 18h18" stroke-width="2"/></svg>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5" stroke-width="2"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="2"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-width="2"/></svg>
+                </button>
+            </header>
+
+            <div class="page-content">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <div style="margin-bottom: 2rem;">
+                        <h1 class="hero-title">Internship Opportunities</h1>
+                        <p class="hero-subtitle">Discover and apply to top internship programs from leading tech companies</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <div class="card-content">
+                            <div class="filters-bar">
+                                <input type="text" class="input search-input" placeholder="Search by role, company, or skills..." id="searchInput" oninput="filterInternships()">
+                                <select class="select" id="locationFilter" onchange="filterInternships()">
+                                    <option value="all">All Locations</option>
+                                    <option value="CA">California</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="Remote">Remote</option>
+                                </select>
+                                <select class="select" id="typeFilter" onchange="filterInternships()">
+                                    <option value="all">All Types</option>
+                                    <option value="Remote">Remote</option>
+                                    <option value="On-site">On-site</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards-grid" id="internshipsGrid"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="lucide-icons.js"></script>
+    <script src="internship.js"></script>
+    <script>
+        const internships = [
+            {
+                id: 1,
+                title: "Software Engineering Intern",
+                company: "Google",
+                location: "Mountain View, CA",
+                type: "On-site",
+                duration: "3 months",
+                stipend: "$8,000/month",
+                skills: ["Python", "Data Structures", "Algorithms"],
+                description: "Work on cutting-edge projects in search and AI. Collaborate with world-class engineers.",
+                deadline: "2025-12-15",
+                applied: false
+            },
+            {
+                id: 2,
+                title: "Frontend Developer Intern",
+                company: "Meta",
+                location: "Remote",
+                type: "Remote",
+                duration: "6 months",
+                stipend: "$7,500/month",
+                skills: ["React", "TypeScript", "CSS"],
+                description: "Build user interfaces for billions of users. Learn modern frontend development practices.",
+                deadline: "2025-11-30",
+                applied: false
+            },
+            {
+                id: 3,
+                title: "Machine Learning Intern",
+                company: "Microsoft",
+                location: "Redmond, WA",
+                type: "Hybrid",
+                duration: "4 months",
+                stipend: "$8,500/month",
+                skills: ["Python", "TensorFlow", "PyTorch"],
+                description: "Work on Azure AI services and contribute to cutting-edge ML research.",
+                deadline: "2025-12-01",
+                applied: false
+            },
+            {
+                id: 4,
+                title: "Full Stack Developer Intern",
+                company: "Amazon",
+                location: "Seattle, WA",
+                type: "On-site",
+                duration: "3 months",
+                stipend: "$7,000/month",
+                skills: ["Node.js", "React", "AWS"],
+                description: "Build scalable web applications for Amazon's e-commerce platform.",
+                deadline: "2025-11-25",
+                applied: false
+            },
+            {
+                id: 5,
+                title: "Data Science Intern",
+                company: "Netflix",
+                location: "Los Gatos, CA",
+                type: "Hybrid",
+                duration: "5 months",
+                stipend: "$9,000/month",
+                skills: ["Python", "SQL", "Statistics"],
+                description: "Analyze user behavior and improve recommendation algorithms.",
+                deadline: "2025-12-10",
+                applied: false
+            }
+        ];
+
+        function getTypeClass(type) {
+            if (type === 'Remote') return 'primary';
+            if (type === 'On-site') return 'success';
+            return 'badge';
+        }
+
+        function filterInternships() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const location = document.getElementById('locationFilter').value;
+            const type = document.getElementById('typeFilter').value;
+
+            const filtered = internships.filter(i => {
+                const matchesSearch = !search || 
+                    i.title.toLowerCase().includes(search) || 
+                    i.company.toLowerCase().includes(search) || 
+                    i.skills.some(s => s.toLowerCase().includes(search));
+                const matchesLocation = location === 'all' || i.location.includes(location);
+                const matchesType = type === 'all' || i.type === type;
+                return matchesSearch && matchesLocation && matchesType;
+            });
+
+            renderInternships(filtered);
+        }
+
+        function renderInternships(list) {
+            const grid = document.getElementById('internshipsGrid');
+            grid.innerHTML = list.map(internship => `
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div style="flex: 1;">
+                                <h3 class="card-title">${internship.title}</h3>
+                                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-top: 0.25rem;">
+                                    🏢 ${internship.company}
+                                </p>
+                            </div>
+                            <span class="badge ${getTypeClass(internship.type)}">${internship.type}</span>
+                        </div>
+                        <p class="card-description">${internship.description}</p>
+                    </div>
+                    <div class="card-content">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.875rem; color: var(--muted-foreground);">
+                            <div>📍 ${internship.location}</div>
+                            <div>⏱️ ${internship.duration}</div>
+                            <div>💰 ${internship.stipend}</div>
+                            <div>📅 Deadline: ${new Date(internship.deadline).toLocaleDateString()}</div>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Required Skills:</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                ${internship.skills.map(skill => `<span class="badge">${skill}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        ${internship.applied 
+                            ? '<button class="btn btn-outline" style="flex: 1;" disabled>Applied ✓</button>'
+                            : `<button class="btn btn-primary" style="flex: 1;" onclick="applyInternship(${internship.id})">Apply Now</button>`
+                        }
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function applyInternship(id) {
+            const internship = internships.find(i => i.id === id);
+            if (internship) {
+                internship.applied = true;
+                filterInternships();
+                alert(`Successfully applied to ${internship.title} at ${internship.company}!`);
+            }
+        }
+
+        filterInternships();
+    </script>
+</body>
+</html>

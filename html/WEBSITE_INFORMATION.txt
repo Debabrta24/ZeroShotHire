@@ -1,0 +1,557 @@
+================================================================================
+                    ZEROSHOTHIRE - CAREER GUIDANCE PLATFORM
+                         COMPREHENSIVE WEBSITE INFORMATION
+================================================================================
+
+PROJECT OVERVIEW
+================================================================================
+ZeroShotHire is a comprehensive AI-powered career guidance and development 
+platform designed to help individuals discover their ideal career path, develop
+necessary skills, and achieve their professional goals.
+
+MISSION
+To empower individuals with personalized career guidance through AI-driven 
+insights, helping them make informed decisions about their professional future.
+
+================================================================================
+CORE FEATURES
+================================================================================
+
+1. AI CAREER COACH
+   - Interactive AI-powered chatbot for career advice
+   - Real-time responses to career questions
+   - Personalized guidance based on user profile
+   - Session history tracking
+   - Conversation management
+
+2. CAREER ANALYSIS
+   - Multi-step assessment form
+   - Skills evaluation
+   - Interest identification
+   - Education level tracking
+   - Career goals definition
+   - Work style preferences
+   - Location and salary expectations
+
+3. CAREER RECOMMENDATIONS
+   - AI-generated career suggestions
+   - Match percentage calculations
+   - Salary range information
+   - Growth potential indicators
+   - Required skills breakdown
+   - Industry demand metrics
+   - Work-life balance ratings
+   - Remote work opportunities
+   - Education requirements
+   - Related career paths
+
+4. LEARNING PATH
+   - Personalized learning roadmap
+   - Phase-based course organization
+   - Progress tracking
+   - Course recommendations
+   - Skill development timeline
+   - Resource collections
+   - Interactive course cards
+   - Completion celebrations
+
+5. CAREER ROADMAPS
+   - Visual career progression paths
+   - Role-based roadmaps
+   - Skill requirements per level
+   - Timeline estimates
+   - Milestone tracking
+   - Industry-specific paths
+
+6. DASHBOARD
+   - Progress overview
+   - Learning statistics
+   - Achievement highlights
+   - Career fit analysis
+   - Skill gap visualization
+   - Recent activity feed
+   - Quick action buttons
+
+7. PROGRESS TRACKING
+   - Achievement system
+   - Badge collections
+   - Milestone celebrations
+   - Skill mastery tracking
+   - Learning streaks
+   - Study hours logging
+   - Visual progress indicators
+
+================================================================================
+ADVANCED TOOLS
+================================================================================
+
+8. SKILL ASSESSMENTS
+   - Interactive skill tests
+   - Multiple difficulty levels
+   - Question banks
+   - Real-time scoring
+   - Performance analytics
+   - Skill certification
+   - Progress tracking
+
+9. SALARY CALCULATOR
+   - Role-based salary estimates
+   - Experience level adjustment
+   - Location-based calculations
+   - Skill premium calculations
+   - Industry comparisons
+   - Market insights
+   - Negotiation tips
+
+10. INTERVIEW SIMULATOR
+    - Mock interview practice
+    - Company-specific questions
+    - Role-based scenarios
+    - Feedback system
+    - Recording and playback
+    - Performance evaluation
+    - Improvement suggestions
+
+11. CAREER COMPARISON
+    - Side-by-side career analysis
+    - Salary comparisons
+    - Growth potential ratings
+    - Work-life balance metrics
+    - Education requirements
+    - Job satisfaction data
+    - Market demand trends
+
+12. GOAL TRACKER
+    - Personal goal setting
+    - Milestone creation
+    - Deadline management
+    - Progress visualization
+    - Achievement tracking
+    - Reminder system
+    - Success celebrations
+
+13. COMPANY MATCHER
+    - Company culture fit analysis
+    - Values alignment
+    - Benefits comparison
+    - Work environment preferences
+    - Career growth opportunities
+    - Location matching
+    - Salary benchmarking
+
+14. CAREER NEWS
+    - Industry updates
+    - Job market trends
+    - Skill demand changes
+    - Company news
+    - Technology updates
+    - Career advice articles
+    - Success stories
+
+================================================================================
+PROFESSIONAL DEVELOPMENT
+================================================================================
+
+15. LINKEDIN BOOSTER
+    - Profile optimization tips
+    - Headline suggestions
+    - Summary writing assistance
+    - Skills highlighting
+    - Content recommendations
+    - Network growth strategies
+    - Engagement tips
+
+16. RESUME BUILDER
+    - Template selection
+    - ATS optimization
+    - Content suggestions
+    - Format customization
+    - Export options
+    - Industry-specific templates
+    - Keyword optimization
+
+17. NETWORKING EVENTS
+    - Event discovery
+    - Industry conferences
+    - Meetup listings
+    - Workshop calendars
+    - Virtual events
+    - Registration links
+    - Reminder system
+
+18. JOB MATCHES
+    - Personalized job listings
+    - Match percentage
+    - Skill alignment
+    - Salary information
+    - Company details
+    - Application tracking
+    - Saved jobs
+
+================================================================================
+SKILL BUILDING TOOLS
+================================================================================
+
+19. DSA PRACTICE
+    - Company-specific problem sets
+    - Difficulty levels (Easy, Medium, Hard)
+    - Code editor integration
+    - Test cases
+    - Solution submissions
+    - Progress tracking
+    - Performance analytics
+    - Topic-wise organization
+
+20. SPOKEN ENGLISH
+    - Conversation courses
+    - Pronunciation guides
+    - Grammar lessons
+    - Business English
+    - Interview preparation
+    - Presentation skills
+    - Confidence building
+
+21. INTERNSHIP OPPORTUNITIES
+    - Curated internship listings
+    - Skill-based matching
+    - Location filtering
+    - Company information
+    - Application management
+    - Deadline tracking
+    - Success tips
+
+================================================================================
+USER MANAGEMENT
+================================================================================
+
+22. PROFILE
+    - Personal information
+    - Contact details
+    - Skills inventory
+    - Experience summary
+    - Education history
+    - Career goals
+    - Preferences
+    - Avatar management
+
+23. SETTINGS
+    - Account preferences
+    - Notification settings
+    - Privacy controls
+    - Theme selection (Light/Dark)
+    - Email preferences
+    - Data management
+    - Account security
+
+================================================================================
+TECHNICAL SPECIFICATIONS
+================================================================================
+
+FRONTEND TECHNOLOGIES:
+- Pure HTML5
+- CSS3 with CSS Variables
+- Vanilla JavaScript (ES6+)
+- Responsive Design
+- Mobile-first approach
+- Cross-browser compatible
+
+STYLING APPROACH:
+- Custom CSS with design system
+- CSS Variables for theming
+- Flexbox and Grid layouts
+- Smooth animations and transitions
+- Dark mode support
+- Accessible design patterns
+
+DATA MANAGEMENT:
+- LocalStorage for persistence
+- In-memory data structures
+- Session management
+- State management patterns
+
+FEATURES:
+- No framework dependencies
+- No build process required
+- Works offline (after initial load)
+- Fast page loads
+- Responsive on all devices
+- SEO optimized
+
+================================================================================
+USER EXPERIENCE
+================================================================================
+
+NAVIGATION:
+- Sidebar navigation
+- Collapsible menu
+- Quick access buttons
+- Breadcrumb trails
+- Search functionality
+- Recent pages
+
+DESIGN PRINCIPLES:
+- Clean and modern interface
+- Intuitive navigation
+- Clear visual hierarchy
+- Consistent styling
+- Accessible components
+- Responsive layouts
+
+INTERACTIONS:
+- Smooth animations
+- Hover effects
+- Loading states
+- Success feedback
+- Error handling
+- Form validation
+
+ACCESSIBILITY:
+- Keyboard navigation
+- Screen reader support
+- ARIA labels
+- High contrast support
+- Focus indicators
+- Alt text for images
+
+================================================================================
+COLOR SCHEME
+================================================================================
+
+LIGHT MODE:
+- Primary: #3b82f6 (Blue)
+- Background: #ffffff (White)
+- Foreground: #0f172a (Dark Blue)
+- Muted: #f1f5f9 (Light Gray)
+- Border: #e2e8f0 (Light Border)
+- Success: #10b981 (Green)
+- Warning: #f59e0b (Orange)
+- Danger: #ef4444 (Red)
+
+DARK MODE:
+- Primary: #3b82f6 (Blue)
+- Background: #0f172a (Dark Blue)
+- Foreground: #f1f5f9 (Light Gray)
+- Muted: #1e293b (Dark Gray)
+- Border: #334155 (Dark Border)
+- Success: #10b981 (Green)
+- Warning: #f59e0b (Orange)
+- Danger: #ef4444 (Red)
+
+================================================================================
+PAGE STRUCTURE
+================================================================================
+
+COMMON LAYOUT:
+1. Sidebar Navigation
+   - Brand/Logo
+   - Navigation sections
+   - Collapsible menu
+
+2. Main Content Area
+   - Header bar
+     - Sidebar toggle
+     - Theme toggle
+   - Page content
+     - Dynamic content area
+     - Forms and interactions
+
+3. Components
+   - Cards
+   - Buttons
+   - Forms
+   - Tables
+   - Charts
+   - Modals
+   - Alerts
+
+================================================================================
+DATA MODELS
+================================================================================
+
+USER PROFILE:
+- Name
+- Email
+- Avatar
+- Skills
+- Experience
+- Education
+- Goals
+- Preferences
+
+CAREER DATA:
+- Career titles
+- Descriptions
+- Required skills
+- Salary ranges
+- Growth potential
+- Education requirements
+- Related careers
+
+COURSES:
+- Title
+- Description
+- Duration
+- Difficulty
+- Provider
+- Rating
+- Skills taught
+- Enrollment status
+
+ACHIEVEMENTS:
+- Title
+- Description
+- Icon
+- Category
+- Unlock date
+- Progress
+- Requirements
+
+GOALS:
+- Title
+- Description
+- Deadline
+- Progress
+- Milestones
+- Status
+
+================================================================================
+USAGE INSTRUCTIONS
+================================================================================
+
+GETTING STARTED:
+1. Open index.html in a web browser
+2. Explore features from the landing page
+3. Navigate using the sidebar menu
+4. Toggle dark/light theme as preferred
+5. Fill out career analysis to get recommendations
+
+NAVIGATION:
+- Use sidebar menu to access all pages
+- Click logo to return to landing page
+- Use browser back/forward buttons
+- Bookmark favorite pages
+
+DATA PERSISTENCE:
+- Theme preference saved automatically
+- Some data saved in browser storage
+- Data resets when browser storage is cleared
+- No server-side persistence (demo version)
+
+================================================================================
+BROWSER COMPATIBILITY
+================================================================================
+
+FULLY SUPPORTED:
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Opera 76+
+
+MOBILE BROWSERS:
+- iOS Safari 14+
+- Chrome Mobile
+- Firefox Mobile
+- Samsung Internet
+
+================================================================================
+FILE STRUCTURE
+================================================================================
+
+html/
+├── index.html                  (Landing page)
+├── dashboard.html              (Main dashboard)
+├── career-analysis.html        (Career assessment)
+├── recommendations.html        (Career recommendations)
+├── learning-path.html          (Learning roadmap)
+├── career-roadmaps.html        (Career paths)
+├── progress.html               (Progress tracking)
+├── jobs.html                   (Job matches)
+├── profile.html                (User profile)
+├── settings.html               (Settings)
+├── ai-coach.html               (AI career coach)
+├── assessments.html            (Skill assessments)
+├── salary-calculator.html      (Salary calculator)
+├── interview-simulator.html    (Interview practice)
+├── events.html                 (Networking events)
+├── career-comparison.html      (Career comparison)
+├── goal-tracker.html          (Goal tracking)
+├── company-matcher.html        (Company matching)
+├── career-news.html            (Career news)
+├── linkedin-booster.html       (LinkedIn optimization)
+├── resume-builder.html         (Resume builder)
+├── internship.html             (Internship listings)
+├── dsa.html                    (DSA practice)
+├── spoken-english.html         (English courses)
+├── styles.css                  (All styling)
+├── script.js                   (Common JavaScript)
+├── nav-template.html           (Navigation template)
+├── README.md                   (Technical documentation)
+└── WEBSITE_INFORMATION.txt     (This file)
+
+================================================================================
+FUTURE ENHANCEMENTS
+================================================================================
+
+PLANNED FEATURES:
+- Backend integration
+- User authentication
+- Real-time data updates
+- Social features
+- Mobile apps
+- API integrations
+- Advanced analytics
+- Premium features
+- Community forums
+- Mentor matching
+- Video courses
+- Live workshops
+- Certificate generation
+- Job application tracking
+- Salary negotiation tools
+- Remote work finder
+- Skill gap automation
+- AI-powered interviews
+- Virtual career fairs
+
+================================================================================
+SUPPORT & CONTACT
+================================================================================
+
+For questions, feedback, or support:
+- Visit our website
+- Contact support team
+- Check documentation
+- Browse FAQ section
+- Join community forums
+
+================================================================================
+LICENSE & CREDITS
+================================================================================
+
+This is a demonstration project showcasing a career guidance platform.
+
+ICONS:
+- Lucide Icons (via CDN)
+
+FONTS:
+- Inter (System font fallback)
+
+DESIGN:
+- Custom design system
+- Inspired by modern web applications
+
+================================================================================
+VERSION HISTORY
+================================================================================
+
+Version 1.0.0 - October 2025
+- Initial release
+- All 23 pages implemented
+- Dark mode support
+- Responsive design
+- Complete feature set
+
+================================================================================
+                              END OF DOCUMENTATION
+================================================================================
