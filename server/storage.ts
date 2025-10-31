@@ -2354,4 +2354,7 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+import { MongoStorage } from "./db/MongoStorage";
+
+// Use MongoDB storage if MONGODB_URI is configured, otherwise use in-memory storage
+export const storage = process.env.MONGODB_URI ? new MongoStorage() : new MemStorage();

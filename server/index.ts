@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { connectDB } from "./db/mongodb";
 
 const app = express();
 
@@ -18,6 +19,13 @@ app.use(express.json({
 app.use(express.urlencoded({ extended: false }));
 
 (async () => {
+  // Connect to MongoDB if MONGODB_URI is configured
+  if (process.env.MONGODB_URI) {
+    await connectDB();
+  } else {
+    log('No MONGODB_URI found, using in-memory storage');
+  }
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {

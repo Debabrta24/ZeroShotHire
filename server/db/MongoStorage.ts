@@ -286,7 +286,7 @@ export class MongoStorage implements IStorage {
   // Event Cache methods
   async getCachedEvents(): Promise<{ events: EventbriteEvent[], cachedAt: string } | undefined> {
     const cache = await EventCacheModel.findOne({}).lean();
-    return cache || undefined;
+    return cache as { events: EventbriteEvent[], cachedAt: string } | null || undefined;
   }
 
   async setCachedEvents(events: EventbriteEvent[]): Promise<void> {
