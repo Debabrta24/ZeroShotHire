@@ -1,0 +1,11 @@
+npm install cross-env --save-dev
+
+
+"scripts": {
+  "dev": "cross-env NODE_ENV=development tsx server/index.ts"
+}
+
+
+app.listen(5010, () => {
+  console.log(`✅ Server running at http://localhost:${5010}`);
+});
