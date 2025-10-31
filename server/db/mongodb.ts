@@ -11,6 +11,9 @@ export async function connectDB() {
     await mongoose.connect(uri);
     
     console.log('✅ MongoDB connected successfully');
+    console.log('📝 Database:', mongoose.connection.db?.databaseName || 'Unknown');
+    console.log('💡 User data (profiles, job applications, resumes, etc.) will be stored persistently in MongoDB.');
+    console.log('💡 Static data (roadmaps, interview questions, mentors, salary insights) will use in-memory fallback if not seeded.');
     
     mongoose.connection.on('error', (err) => {
       console.error('MongoDB connection error:', err);

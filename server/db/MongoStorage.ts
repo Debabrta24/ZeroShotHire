@@ -2,6 +2,7 @@ import { randomUUID } from "crypto";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 import type { CareerAnalysisResult, IStorage } from "../storage";
+import { MemStorage } from "../storage";
 import type {
   User,
   InsertUser,
@@ -41,11 +42,14 @@ const MemoryStore = createMemoryStore(session);
 
 export class MongoStorage implements IStorage {
   public sessionStore: session.Store;
+  private memStorageFallback: MemStorage;
 
   constructor() {
     this.sessionStore = new MemoryStore({
       checkPeriod: 86400000,
     });
+    // Create MemStorage instance for static data fallback
+    this.memStorageFallback = new MemStorage();
   }
 
   // User methods
@@ -140,11 +144,19 @@ export class MongoStorage implements IStorage {
   // Career Roadmap methods
   async getRoadmaps(): Promise<CareerRoadmap[]> {
     const roadmaps = await CareerRoadmapModel.find({}).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (roadmaps.length === 0) {
+      return this.memStorageFallback.getRoadmaps();
+    }
     return roadmaps;
   }
 
   async getRoadmapById(id: string): Promise<CareerRoadmap | undefined> {
     const roadmap = await CareerRoadmapModel.findOne({ id }).lean();
+    // Fall back to MemStorage if not found in MongoDB
+    if (!roadmap) {
+      return this.memStorageFallback.getRoadmapById(id);
+    }
     return roadmap || undefined;
   }
 
@@ -176,23 +188,39 @@ export class MongoStorage implements IStorage {
   // Interview methods
   async getInterviewCategories(): Promise<InterviewCategory[]> {
     const categories = await InterviewCategoryModel.find({}).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (categories.length === 0) {
+      return this.memStorageFallback.getInterviewCategories();
+    }
     return categories;
   }
 
   async getInterviewQuestions(category?: string): Promise<InterviewQuestion[]> {
     const filter = category ? { category } : {};
     const questions = await InterviewQuestionModel.find(filter).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (questions.length === 0) {
+      return this.memStorageFallback.getInterviewQuestions(category);
+    }
     return questions;
   }
 
   async getInterviewTips(): Promise<InterviewTip[]> {
     const tips = await InterviewTipModel.find({}).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (tips.length === 0) {
+      return this.memStorageFallback.getInterviewTips();
+    }
     return tips;
   }
 
   // Mentor methods
   async getMentors(): Promise<Mentor[]> {
     const mentors = await MentorModel.find({}).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (mentors.length === 0) {
+      return this.memStorageFallback.getMentors();
+    }
     return mentors;
   }
 
@@ -200,11 +228,19 @@ export class MongoStorage implements IStorage {
   async getSalaryInsights(role?: string): Promise<SalaryInsight[]> {
     const filter = role ? { role } : {};
     const insights = await SalaryInsightModel.find(filter).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (insights.length === 0) {
+      return this.memStorageFallback.getSalaryInsights(role);
+    }
     return insights;
   }
 
   async getNegotiationTips(): Promise<NegotiationTip[]> {
     const tips = await NegotiationTipModel.find({}).lean();
+    // Fall back to MemStorage if MongoDB is empty
+    if (tips.length === 0) {
+      return this.memStorageFallback.getNegotiationTips();
+    }
     return tips;
   }
 
